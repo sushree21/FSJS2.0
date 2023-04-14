@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--container for holdling the weather card-->
+    <div class="container">
+        <h1>Weather Web App</h1>
+        <!--section for searching the weather of a city-->
+        <form onsubmit="getData(event)" class="searchData">
+        <input type="text" id="inputBox" placeholder="Enter the city name">
+        <button>Search</button>
+        </form>
+        <!--section for displaying the city weather data-->
+        <section class="cityWeatherData">
+        <!--displaying the country details-->
+        <div class="countryDetails details">
+         <!--displaying the country name-->
+        <div class="card">
+         <p>Country Name</p>
+         <p id="countryName">_</p>
+        </div>
+        <!--displaying the state name-->
+        <div class="card">
+            <p>State Name</p>
+            <p id="stateName">_</p>
+           </div>
+          <!--displaying the city name--> 
+          <div class="card">
+            <p>City Name</p>
+            <p id="cityName">_</p>
+           </div>
+        </div>
+        <!--displaying the weather status--> 
+         <div class="weatherDetails details">
+        <!--displaying the humidiy--> 
+        <div class="card">
+            <p>Humidity</p>
+            <p id="humidity">_</p>
+        </div>
+        <!--displaying the wind speed--> 
+        <div class="card">
+            <p>Wind Speed</p>
+            <p><span id="windSpeed">_</span>KMPH</p>
+        </div>
+        <!--displaying the current temperature in celcius-->
+        <div class="card">
+            <p>Temparature</p>
+            <!--unicode for degree celcius symbol-->
+            <p><span id="temparature">_</span>&#8451;</p>
+        </div>
+        <!--displaying the weather condition-->
+        <div class="card">
+            <img width="20px" id="logoImage" src="" alt="icon">
+            <p id="weatherStatus">_</p>
+        </div>
+         </div>
+        </section>
+    </div>
+</body>
+<!--adding the javascript file-->
+<script src="script.js"></script>
+</html>
